@@ -1,0 +1,21 @@
+.nav-link{
+    padding: 5px 10px !important;
+    border-radius: 3px;
+    color: #000 !important;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+}
+.nav-link:hover{
+    background-color: dodgerblue;
+    color: #fff !important;
+}
+a i{
+    color: dodgerblue !important;
+}
+.admin-title{
+    font-size: 50px;
+}
+.active{
+    background-color: dodgerblue;
+    color: #fff !important;
+}
