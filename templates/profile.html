@@ -1,0 +1,60 @@
+{% extends "dashboard.html" %}
+
+{% block body %}
+
+<div class="card p-3 mb-3">
+    <h4 class="mb-0 mp-0">Profile</h4>
+    <hr>
+    {% if adm %}
+      
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-floating mb-3">
+                    <input type="text" name="username" id="floatingInput" class="form-control" placeholder="Username" value="{{ adm.user.username }}">
+                    <label for="floatingInput">Username</label>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-floating mb-3">
+                    <input type="email" name="email" id="id_email" class="form-control" placeholder="E-mail address" value="{{ adm.email }}">
+                    <label for="id_email">E-mail address</label>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-floating mb-3">
+                    <input type="text" name="first_name" id="id_firstname" class="form-control" placeholder="First name" value="{{ adm.first_name }}">
+                    <label for="id_firstname">First name</label>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-floating mb-3">
+                    <input type="text" name="last_name" id="id_lastname" class="form-control" placeholder="Last name" value="{{ adm.last_name }}">
+                    <label for="id_lastname">Last name</label>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-floating mb-3">
+                    <input type="date" name="date_of_birth" id="id_dateofbirth" class="form-control" placeholder="Date of birth" value="{{ adm.date_of_birth }}">
+                    <label for="id_dateofbirth">Date of birth</label>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-floating mb-3">
+                    <select name="gender" id="id_gender" class="form-control" placeholder="Gender">
+                        <option value="" selected>------</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <label for="id_gender">Gender</label>
+                </div>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-primary px-4" value="Submit">
+    </form>
+</div>
+  
+{% endblock %}

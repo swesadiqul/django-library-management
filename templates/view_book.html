@@ -1,0 +1,39 @@
+{% extends "dashboard.html" %}
+
+
+{% block title %}
+view-book
+{% endblock  %}
+
+{% block css %}
+{% endblock %}
+
+{% block body %}
+<div class="card p-3 mb-3">
+    <h4 class="mb-0 mp-0">View Available Book In Library</h4>
+    <hr>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name of books</th>
+                <th>ISBN</th>
+                <th>Author</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in books %}
+              <tr>
+                <td>{{ record.id }}</td>
+                <td>{{ record.name }}</td>
+                <td>{{ record.isbn }}</td>
+                <td>{{ record.author }}</td>
+                <td>{{ record.category }}</td>
+              </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+  
+{% endblock %}

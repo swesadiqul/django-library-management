@@ -1,0 +1,15 @@
+.form-control{
+    border: none !important;
+    border-radius: 0%;
+    border-bottom: 1px solid gray !important;
+    line-height: none !important;
+    box-shadow: none !important;
+    padding: 3px;
+}
+.con-info{
+    background-color: dodgerblue;
+}
+p a{
+    color: #fff !important;
+    margin-right: 10px;
+}

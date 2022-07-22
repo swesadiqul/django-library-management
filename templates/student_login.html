@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+
+{% block body %}
+<section class="user_login py-5" id="user_login">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class='col-lg-6 shadow p-5 rounded bg-white'>
+                <form action="" method="post" novalidate>
+                    {% csrf_token %}
+                    {% if form.non_field_errors %}
+                        {% for error in form.non_field_errors %}
+                            <p class="er text-danger">{{error}}</p>
+                        {% endfor %}
+                    {% endif %}
+                    {% for fm in form %}
+                    {{ fm }}
+                    {% for error in fm.errors %}
+                    <p class="text-danger mb-3">{{ error }}</p>
+                    {% endfor %}
+                    {% endfor %}
+                   <div class="d-grid gap-2 col-8 mx-auto">
+                    <input type="submit", class="btn btn-primary btn-lg rounded-pill mb-3" value="Log In">
+                   </div>
+                </form>
+                <p class="text-center">If you don't have any account, Please <a href="{% url 'student_signup' %}">Signup </a> Now ! </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
